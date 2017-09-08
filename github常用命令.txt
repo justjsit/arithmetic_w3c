@@ -10,3 +10,38 @@ git add .(将所有文件添加到仓库)
 git commit -m "提交文件"(双引号内是提交注释)
 git remote add origin `仓库地址`(关联github仓库)
 git push -u origin master（上传本地代码）
+
+
+git status(时刻掌握仓库当前的状态)
+git diff 文件名 （查看已提交文件与修改后的差异）
+$ git reset --hard HEAD^ （返回上一个版本）
+git reset --hard `版本commit id`（回退到某一个版本）
+git reflog（记录你输入的每一次命令）
+git checkout -- file可以丢弃工作区的修改
+git reset HEAD file可以把暂存区的修改撤销掉
+git rm file从版本库中删除该文件
+{
+$ git checkout -b dev（创建dev分支，然后切换到dev分支：）
+-b参数表示创建并切换，相当于以下两条命令：
+$ git branch dev
+$ git checkout dev
+}
+$ git branch（查看当前分支）
+git merge（用于合并指定分支到当前分支）
+$ git branch -d dev（删除dev分支）
+
+$ git merge --no-ff -m "merge with no-ff" dev（--no-ff参数，表示禁用Fast forward）
+
+Git鼓励大量使用分支：
+
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
