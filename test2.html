@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/*
+	//数组截断
+	//返回一个数组被截断n个元素后还剩余的元素，从索引0开始截断。
+	   function slasher(arr, howMany) {
+		// it doesn't always pay to be first
+		arr.splice(0, howMany);
+		return arr;
+		}
+
+		slasher([1, 2, 3], 2);
+	*/
+
+	//数组查询
+	/* 如果数组第一个字符串元素包含了第二个字符串元素的所有字符，则函数返回true。
+
+举例，["hello", "Hello"]应该返回true，因为在忽略大小写的情况下，第二个字符串的所有字符都可以在第一个字符串找到。
+
+["hello", "hey"]应该返回false，因为字符串"hello"并不包含字符"y"。
+
+["Alien", "line"]应该返回true，因为"line"中所有字符都可以在"Alien"找到。
+function mutation(arr) {
+arr[0]=arr[0].toLowerCase();
+var newarr = arr[1].toLowerCase().split("");
+for(var i=0;i<newarr.length;i++){
+	if(arr[0].indexOf(newarr[i])<0){
+		return false;
+	}
+}
+return true;
+}
+
+mutation(["Hello", "Hey"]);
+*/
+/*删除数组中特定值
+
+删除数组中的所有的假值。
+
+在JavaScript中，假值有false、null、0、""、undefined 和 NaN。
+
+
+function bouncer(arr) {
+// Don't show a false ID to this bouncer.
+var newarr = arr.filter(function(value){
+	var x =new Boolean(value);
+	if(x==true){
+		return value;
+	}
+	
+});
+return newarr;
+}
+
+bouncer([7, "ate", "", false, 9]);
+*/
+
+/*去除数组中任意多个值
+实现一个 destroyer 函数，第一个参数是初始数组，后跟一个或多个参数。从初始数组中删除与这些参数具有相同值的所有元素。
+*/
+
+function destroyer(arr) {
+// Remove all the values
+	var args=Array.prototype.slice.call(arguments); 
+	console.log(args);
+	var newargs = args[0].filter(function(value){
+		var result = true;
+		for(var i=1;i<args.length;i++){
+			if(value != args[i]){
+				result = result
+			}else{
+				result=result&&false
+			}
+		}
+		return result;
+		
+		// var result=true;
+  // for(var i=1;i<args.length;i++){
+  //   if(args[i]===item)
+  //     {
+  //       result=result&&false;
+  //     }else
+  //     {
+  //       result=result&&true;
+  //     }
+  // }
+  // return result;
+
+	});
+	console.log(newargs);
+	// for(var i=0;i<arguments.length;i++){
+	// 	console.log(arguments[i])
+	// }
+ return newargs;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+	</script>
+</body>
+</html>
