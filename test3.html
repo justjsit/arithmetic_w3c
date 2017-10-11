@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>w3cschool.cn中级脚本算法列表</title>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="highcharts.js"></script>
+</head>
+<body>
+	<div id="sContainer"></div>
+	<script>
+	
+// var arr1=[1,1,2,2,3,3,4,4,5,5];
+// var arr2=[];
+// for(var i=0,len=arr1.length;i<len;i++){
+// if(arr2.indexOf(arr1[i])==-1){
+   
+//      arr2.push(arr1[i])
+//    }
+
+// }
+// console.log(arr1);
+// console.log(arr2.length);
+// console.log(arr2);
+// var aa=Math.ceil(Math.random()*12);
+// console.log(aa);
+// switch (aa) {
+// 	case 1:
+// 		// statements_1
+// 		break;
+// 	default:
+// 		// statements_def
+// 		break;
+// }
+/*找出数组间差异
+比较两个数组，然后返回一个新数组，该数组的元素为两个给定数组中所有独有的数组元素。换言之，返回两个数组的差异。
+Array.prototype.slice()
+Array.prototype.filter()
+Array.prototype.indexOf()
+Array.prototype.concat()
+
+
+function diff(arr1, arr2) {
+var newArr = [];
+// Same, same; but different.
+// 
+	var a = arr1.filter(function(item,index){
+		return arr2.indexOf(item)<0;
+	});
+	var b = arr2.filter(function(item,index){
+		return arr1.indexOf(item)<0;
+	});
+newArr=a.concat(b);
+	// newArr=arr1;
+	// console.log(newArr);
+return newArr;
+}
+diff([1, "calf", 3, "piglet"], [1, "calf", 3, 4])
+// diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+*/ 
+	</script>
+</body>
+</html>
